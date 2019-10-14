@@ -1,0 +1,38 @@
+title: Default
+fields:
+
+  auxtitle:
+    display:    Main Title (with number)        
+    type:       text    
+
+  headerimage:
+    display:    Header Image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
+
+  title1:            
+    display:    Section 1 Title        
+    type:       text            
+  content1:
+    display:    Section 1 Content
+    type:       markdown
+
+  quote_author:
+    display:    Quote author
+    type:       text
+    
+  quote_text:
+    display:    Quote text
+    type:       markdown
+    
+  quote_background:
+    display:    Quote image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
+
+  htmlcontent:
+    display:    If you have any code, paste it here
+    type:       redactor
+    required:   false

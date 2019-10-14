@@ -1,0 +1,16 @@
+title: Contact
+honeypot: Musical
+fields:
+  name:
+    display: Name
+    validate: required
+  email:
+    display: Email
+    validate: email|required
+  message:
+    display: Message
+    validate: required
+email:
+  -
+    to: tim.coomar@gmail.com
+    subject: 'Submission from Faros website "Contact" page'

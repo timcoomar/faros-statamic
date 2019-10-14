@@ -1,0 +1,29 @@
+:root {
+    --faros-darkblue:   rgba(96,113,141,1);
+    --faros-brown:      rgba(174,147,110,1);
+    --faros-warmgray:   rgba(128,120,116,1);
+    --burger-width:     2.3rem;
+    --burger-height:    .17em;
+    --burger-gap:       .3em;
+    --burger-color:     rgba(96,113,141,1);
+  }
+  
+  @import 'base/base';
+
+  @import 'elements/forms';
+
+  @import 'components/hamburgers';
+  @import 'components/swiper';
+  @import 'components/swiper-adjust';
+  @import 'components/moving-dot';  
+  @import 'components/nav';
+  @import 'components/page-menu-sticky';
+  @import 'components/footer';
+  
+  @import 'layouts/layout';
+  @import 'layouts/section-types';
+  @import 'layouts/home';
+  @import 'layouts/page';
+
+  @import 'animations/aux';
+    

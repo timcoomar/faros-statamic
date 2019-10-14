@@ -1,0 +1,31 @@
+title: Home Page
+fields:
+
+  title1:            
+    display:    Who we are - Title        
+    type:       text            
+  content1:
+    display:    Who we are - Content
+    type:       markdown
+
+  title2:
+    display:    Approach - Title
+    type:       text
+  content2:
+    display:    Approach - Content
+    type:       markdown
+  image2:
+    display:    Approach - Image
+    type:       assets
+    container:  main
+
+  title3:
+    display:    Services - Title
+    type:       text
+  content3:
+    display:    Services - Content
+    type:       markdown
+  services_slider:
+    display:    Services Slider Gallery
+    type:       assets
+    container:  main

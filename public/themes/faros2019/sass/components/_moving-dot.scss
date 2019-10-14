@@ -1,0 +1,66 @@
+/*** JOURNEY SVG ***/
+
+.nav-main {
+  //overflow:       hidden;
+}
+
+.nav-main > svg {
+  //min-height:     650vh;
+  height:         100%;
+  position:       absolute;
+  top:            0;
+  right:          0;
+  max-width:      19vw;
+}
+
+body:not(.page-home) .nav-main > svg {
+  display: none;
+}
+
+#farosDot {
+  offset-path: path("M43.945-0.201l-3.82,224.106L27.012,525.792c-0.001,0-1.441,29.452-6.268,67.83c-11.061,87.964-10.487,227.239-6.718,285.032C18.526,947.661,55,1253.202,55,1253.202s38,227.548-3.334,380.631c-21.18,78.44-25.654,184.282-26.598,197.756c-5.39,76.993-25.068,273.745-0.082,411.692c9.41,51.958,20.233,185.727,13.014,295.08c-7.121,107.882-30,464.416-15.41,569.176c-2.926,96.461,35.41,240.852,28.355,331.26c-4.531,34.6-4.771,133.001-7.945,251.201c-4.041,150.499-5.787,311.674-5.787,311.674");
+  animation-name:             moveDot;
+  animation-duration:         100s;
+  animation-delay:            0;
+  animation-timing-function:  linear;
+  animation-direction:        alternate;
+  animation-iteration-count:  infinite;
+  animation-play-state:       paused;
+}
+
+#farosDotLink circle:hover {
+  cursor: pointer;
+}
+
+#farosDotLink:hover #rect,
+#farosDotLink:hover #rectSide,
+#farosDotLink:hover #text {
+  opacity: 1;
+}
+
+@supports not ( offset-path: none ) { 
+  #farosDot {
+    display: none;
+  } 
+}
+
+@keyframes moveDot {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#text {
+  opacity: 0;
+  font-size:    .5em;
+  font-family:  Roboto;
+  transition: opacity .3s;
+}
+
+#rect, #rectSide {
+  opacity: 0;
+}
+
+.page-contact .nav-main svg {
+  display: none;
+}

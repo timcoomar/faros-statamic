@@ -1,0 +1,297 @@
+// For all sections in main
+
+@media (max-width: 650px) {
+  main > *:not(.full-width) {
+   padding-right: 4rem; 
+  }
+}
+
+@media (max-width: 450px) {
+  main > *:not(.full-width) {
+   padding-right: 2rem;
+   padding-left:  2rem !important;
+  }
+}
+
+@media (max-width: 650px) {
+  [class^="section-"] > [class$="__text"] {
+    margin-bottom: 0;
+  }
+  [class^="section-"] > [class$="__text"] p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// SUMMARY HEADER = ie. the two sections on Services page that begin "What we do for..."
+
+.summary-header {
+  padding:        2.5rem 0 2rem 4rem;
+}
+
+  .summary-header__title {
+    margin:       0 0 2rem;
+  }
+
+  .summary-header__content {
+    line-height:  1.6;
+    font-size:    1.7rem;
+  }
+
+  @media (max-width: 450px) {
+    .summary-header {
+      padding: 2rem 3rem;
+    }
+    .summary-header__content {
+      font-size:  1.9rem;
+    }
+  }
+
+// SECTION TYPES
+
+// Section A
+
+.section-a { // type a has the title on the left and the text content in two columns to the right of it
+  display:            flex;
+  flex-wrap:          wrap;  
+  padding:            6.5vw 2rem 4rem;                 
+}
+
+  .section-a__header {
+    width:            100%;
+    text-transform:   uppercase;
+    font-weight:      bold;
+    display:          inline-block;
+    color:            var(--faros-brown);
+    padding-bottom:   .9rem;
+  }
+    .section-a__header span {
+      width:            45%;
+      padding-bottom:   .3rem;
+      display:          block;
+      padding-left:     2rem;
+      border-bottom:    1px solid var(--faros-darkblue);
+      font-weight:      500;
+      letter-spacing:   1px;
+      font-size:        1.4rem;
+    }
+
+  .section-a__title {
+    width:        35%;
+    --section-title-size: 5.5rem;
+    font-size:    var(--section-title-size);
+    margin:       0;
+    line-height:  .9;
+    color:        var(--faros-darkblue);
+    margin-top:   .7rem;
+    text-transform: lowercase;
+  }
+    @media (max-width: 1080px) {
+      [class$="__title"] {
+        --section-title-size: 4.5rem;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .section-a__title {
+        margin-bottom: 1rem;
+      }
+    }
+
+  .section-a__text {
+    width:          65%;
+    color:          var(--faros-warmgray);
+    padding:        1rem;
+    font-size:      var(--content-text-size);
+  }
+
+    .two-columns {
+      columns:        2;
+      column-gap:     1.5rem;
+    }
+
+      @media (max-width: 1080px) {
+        .two-columns {
+          columns: 1;
+        }
+      }
+
+    .section-a__text > * {
+      --content-text-size: 1.2rem;
+      margin-top:     0;
+      margin-bottom:  1rem;
+      line-height:    1.8;
+    }
+
+    .section-morelink {
+      text-align:         center;
+      display:            inline-block;
+      // margin-left:        auto; change these values to make it left or right
+      // margin-right:       1rem;
+      margin-bottom:      2.5rem;
+      padding:            .7rem 1.8rem;
+      text-transform:     uppercase;
+      letter-spacing:     1px;
+      font-weight:        300;
+      font-size:          1rem;
+      transition:         .2s;
+      color:              var(--faros-darkblue);
+      border:             1px solid var(--faros-darkblue);
+    }
+
+    .section-morelink.reverse-color {
+      color: white;
+      border: 1px solid white;
+    }
+    
+      .section-morelink:hover {
+        background:     var(--faros-darkblue);
+        color:          white;
+        border:         1px solid white;
+        outline:        1px solid var(--faros-darkblue);
+      }
+
+      .section-morelink.reverse-color:hover {
+        color: var(--faros-brown);
+        border: 1px solid var(--faros-brown);
+      }
+
+
+// Section B
+
+.section-b { // type b has the image on one side and the content on the other. The side of each can be change with 'order'
+  display:       flex; 
+  padding:       4rem 3rem 2rem;                 
+}
+
+  .section-b__content,
+  .section-b__image {
+    width:          50%;
+  }
+
+  .section-b--r > .section-b__content {
+    order:          2;
+    padding:        4rem .5rem 0 3rem;
+  }
+  .section-b--r > .section-b__image {
+    order:          1;
+  }
+
+  .section-b--l > .section-b__content {
+    order:          1;
+    padding:        4rem 2rem 0 .5rem;
+  }
+  .section-b--l > .section-b__image {
+    order:          2;
+  }
+
+  .section-b__header {
+    text-transform:   uppercase;
+    display:          inline-block;
+    color:            var(--faros-brown);
+    width:            40vw;
+    padding-bottom:   .9rem;
+    font-weight:      500;
+    letter-spacing:   1px;
+    font-size:        1.4rem;
+  }
+
+    .section-b__header::after {
+      content:          "";
+      display:          block;
+      width:            100%;
+      border-bottom:    1px solid var(--faros-warmgray);
+      height:           .5rem;
+      transform:        translateX(-27vw);
+    }
+
+    .section-b--l
+    .section-b__header {
+      padding-left:     1.3rem;
+    }
+
+    .section-b--l
+    .section-b__header::after {
+      transform:        translateX(-1.3rem);
+      width:            48vw;
+    }
+
+  .section-b__title {
+    --section-title-size: 5.5rem;
+    font-size:    var(--section-title-size);
+    margin:       0;
+    line-height:  .9;
+    color:        var(--faros-darkblue);
+    text-transform: lowercase;
+  }
+
+  .section-b__text {
+    color:          var(--faros-warmgray);
+    padding:        1rem;
+    margin-top:     0;
+    margin-bottom:  1rem;
+    --content-text-size: 1.2rem;
+    font-size:      var(--content-text-size);
+    line-height:    1.7;
+  }
+
+  .section-b__image > img {
+    width:          100%;
+  }
+
+@media (max-width: 650px) {
+  [class^="section-"] [class*="__text"] {
+    columns: 1;
+  }
+}
+
+
+@media (max-width: 450px) {
+  article[class^="section-"] {
+    flex-direction: column;
+    padding:        2rem;
+  }
+  article[class^="section-"] > [class*="__content"],
+  article[class^="section-"] > [class*="__header"],
+  article[class^="section-"] > [class*="__title"],
+  article[class^="section-"] > [class*="__text"],
+  article[class^="section-"] > [class*="__image"] {
+    width:  100%;
+  }
+  [class^="section-"] [class*="__content"] {
+    padding:        2.5rem .5rem;
+  }
+  [class^="section-"] [class*="__header"] {
+    border-bottom:  1px solid var(--faros-warmgray);
+    margin-bottom:  1.5rem;
+  }
+  [class^="section-"] [class*="__header"] span {
+    border-bottom: none;
+    padding-left:  0;
+  }
+  [class^="section-"] [class*="__header"]::after {
+    display: none;
+  }
+  [class^="section-"] [class*="__text"] {
+    // columns: 1;
+    padding: 0;
+    --content-text-size: 1.8rem;
+  }
+}
+
+// GENERIC PAGE WITH NO INTERNAL PAGE MENU
+
+.page-header--nomenu .page-intro__image {
+  height: 100vh;
+}
+
+.page-header--nomenu .page-intro__text {
+  bottom: 0;
+  left:   4rem;
+}
+
+  @media (max-width: 450px) {
+    .page-header--nomenu .page-intro__text {
+      left: 2rem;
+    }
+  }

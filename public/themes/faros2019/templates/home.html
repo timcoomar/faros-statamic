@@ -1,0 +1,112 @@
+{{ partial:menu_main }}
+
+<div class="grid-home"> 
+
+  <nav class="nav-main home-section--nav home-grid--nav">
+    {{ partial:svg_journey }}
+  </nav> 
+
+  <header class="home-section--intro home-grid--intro">
+    <a href="/" class="site-logo">
+      {{ theme:img src="faros-logo-white-horizontal.png" tag="true" }}
+    </a>
+    {{ partial:home_header_slider }}
+  </header>
+
+  <main class="home-section--main home-grid--main">
+    <article class="section-a section-who" id="home-a">
+      <header class="section-a__header">
+        <span id="hook1About">01. About</span>
+      </header>
+      <h2 class="section-a__title">{{ title1 }}</h2>
+      <div class="section-a__text two-columns">
+        {{ content1 | markdown }}
+      </div>
+      <a href="/about" class="section-morelink">Read more</a>
+    </article>
+    <article class="home-section--main__b full-width">
+      <header class="content__header">
+        <span id="hook2Approach">02. Approach</span>
+      </header>
+      <figure class="content__image">
+        {{ assets:image2 }}
+          <img src="{{ permalink }}">
+        {{ /assets:image2 }}
+      </figure>
+      <h2 class="content__title">{{ title2 }}</h2>
+      <div class="content__bg" data-enllax-ratio="-.1" data-enllax-type="foreground">
+        <div class="content__text two-columns">
+          {{ content2 | markdown }}
+        </div>
+        <a href="/approach" class="section-morelink reverse-color">Read more</a>
+      </div>
+    </article>
+    <article class="home-section--main__c parallax">
+      <header class="content__header">
+        <span id="hook3Services">03. Services</span>
+      </header>
+      <h2 class="content__title">{{ title3 }}</h2>
+      <div class="content__bg">
+        <div class="content__text">
+          {{ content3 | markdown }}
+        </div>
+        <figure class="content__image home-services__slider">
+          
+          <div class="swiper-container horizontal">
+            <div class="swiper-wrapper">
+                {{ assets:services_slider }}
+                  <div class="swiper-slide">
+                    <img src="{{ url }}">
+                  </div>
+                {{ /assets:services_slider }}
+            </div>
+            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+          </div>
+
+        </figure>
+      <a href="services" class="section-morelink">Read more</a>
+    </article>
+    <article class="home-section--main__d full-width">
+      <header class="content__header">
+        <span id="hook4Contribute">04. Contribute</span>
+      </header>
+      <figure class="content__image">
+        <h2 class="content__title">Give</h2>
+        <div class="content__text">
+          <a href="mailto:volunteers@faros.org.gr" class="donation donation--time hovered">
+            <h3 class="donation__title">time</h3>
+            <p>Donate your time. Become a volunteer. Contact us at volunteers@faros.org.gr to find opportunities to serve.</p>
+          </a>
+          <a href="/give" class="donation donation--money">
+            <h3 class="donation__title">money</h3>
+            <p>Help us provide care to refugee children. Give a monthly, yearly, or one-time gift to Faros. </p>
+          </a>
+        </div>
+        <img class="give-img" src="{{ theme:asset src='assets/give-time.jpg' }}">
+      </figure>
+    </article>
+    <article class="home-section--main__e">
+      <h3 class="content__title">follow us</h3>
+      <a class="social-icon__fb" href="https://www.facebook.com/farosgreece/" target="_blank">
+        <img src="{{ theme:asset src='assets/facebook.svg' }}">
+      </a>
+      <a class="social-icon__tw" href="https://twitter.com/farosgreece" target="_blank">
+        <img src="{{ theme:asset src='assets/twitter.svg' }}">
+      </a>
+      <a class="social-icon__yt" href="https://www.youtube.com/channel/UCd65wjfGQiOxns5dsRWdsuQ" target="_blank">
+        <img src="{{ theme:asset src='assets/youtube.svg' }}">
+      </a>
+    </article>
+  </main>
+  
+  {{ partial:footer }}
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ theme:js src='swiper.min-min.js' }}"></script>
+<script src="{{ theme:js src='site-min.js' }}"></script>
+{{ partial:swiper-init }}
+{{ partial:map-js }}

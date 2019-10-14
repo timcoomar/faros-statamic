@@ -1,0 +1,36 @@
+title: Vacancies
+fields:
+
+  headerimage:
+    display:    Header Image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
+      
+  content1:
+    display:    Section 1 Content
+    type:       markdown
+
+  vacancies:
+    type:       grid
+    fields:
+      job:
+        display:  Job description
+        type:     text
+      pdf:
+        display:    Job pdf
+        type:       assets
+        container:  files
+        validate:   "ext:pdf"
+
+  tenders:
+    type:       grid
+    fields:
+      tender:
+        display:  Tender description
+        type:     text
+      contract:
+        display:    Tender pdf
+        type:       assets
+        container:  files
+        validate:   "ext:pdf"

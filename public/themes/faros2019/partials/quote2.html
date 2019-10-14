@@ -1,0 +1,13 @@
+{{ if quotetext2 }}
+<blockquote class="page-quote full-width">
+  <div class="page-quote__text">
+    <p>{{ quotetext2 | markdown }}</p>
+    <span>{{ quoteauthor2 }}</span>
+  </div>
+  <figure class="page-quote__image">
+    {{ assets:quotebackground2 }}
+      <img src="{{ permalink }}">
+    {{ /assets:quotebackground2 }}
+  </figure>
+</blockquote>
+{{ /if}}

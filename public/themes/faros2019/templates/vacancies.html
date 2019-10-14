@@ -1,0 +1,51 @@
+{{ partial:menu_main }}
+
+<div class="grid-page" id="top"> 
+
+  <nav class="nav-main home-section--nav home-grid--nav">
+    {{ partial:svg_journey }}
+  </nav>
+
+  <header class="page-header--generic page-header--nomenu" id="page-header--nomenu">
+    <a href="/" class="site-logo">
+      {{ theme:img src="faros-logo-white-horizontal.png" tag="true" }}
+    </a>
+    <div class="page-intro__image">
+        {{ assets:headerimage }}
+        <img src="{{ permalink }}">
+      {{ /assets:headerimage }}
+    </div>
+    <div class="page-intro__text">
+      <h1 class="page-intro__title">{{ title }}</h1>
+    </div>
+  </header>
+
+  <main class="about-section about-grid--main">
+
+    <header class="summary-header">
+      <h1 class="summary-header__title">Come work with us!</h1>
+      <div class="summary-header__content">
+          {{ content1 | markdown }}
+          <p>Current job opportunities:</p>
+          <ul class="list-vacancies">
+            {{ vacancies }}
+              <li><a href="{{ assets:pdf }} {{ url }} {{ /assets:pdf }}">{{ job }}</a></li>
+            {{ /vacancies }}
+          </ul>
+          <p>Contracts for tender:</p>
+          <ul class="list-tenders">
+              {{ tenders }}
+                <li><a href="{{ assets:contract }} {{ url }} {{ /assets:contract }}">{{ tender }}</a></li>
+              {{ /tenders }}
+            </ul>
+      </div>
+    </header>     
+
+  </main>
+
+    {{ partial:footer_nomap }}
+    
+</div> <!-- end grid-page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ theme:js src='site-min.js' }}"></script>

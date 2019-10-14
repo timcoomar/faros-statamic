@@ -1,0 +1,52 @@
+title: About Page
+fields:
+
+  headerimage:
+    display:    Header Image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
+
+  title1:            
+    display:    Section 1 Title        
+    type:       text            
+  content1:
+    display:    Section 1 Content
+    type:       markdown
+
+  title2:
+    display:    Section 2 Title
+    type:       text
+  content2:
+    display:    Section 2 Content
+    type:       markdown
+
+  title3:
+    display:    Section 3 Title
+    type:       text
+  content3:
+    display:    Section 3 Content
+    type:       markdown
+  farosreports:
+    type:       grid
+    fields:
+      reporttitle:
+        display:  Report Description
+        type:     text
+      reportfile:
+        display:    Report pdf
+        type:       assets
+        container:  files
+        validate:   "ext:pdf"
+
+  quote_author:
+    display:    Quote author
+    type:       text
+  quote_text:
+    display:    Quote text
+    type:       markdown
+  quote_background:
+    display:    Quote image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"

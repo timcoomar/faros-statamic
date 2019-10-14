@@ -1,0 +1,58 @@
+<figure class="home-header__images">
+  <!-- Slider main container -->
+  <div class="swiper-container vertical">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a href="#0" id="playpause">
+                <svg xmlns="http://www.w3.org/2000/svg" width="158" height="158" viewBox="0 0 48 48">
+                  <path d="M-838-2232H562v3600H-838z" fill="none"/>
+                  <path d="M16 10v28l22-14z" fill="rgba(255,255,255,0.8)"/>
+                  <path d="M0 0h48v48H0z" fill="none"/>
+              </svg>              
+            </a>
+            <video id="introvid" width="1920" height="1080" poster="{{ theme:img src='00home/home-slider-1.jpg' }}" playsinline preload style="object-fit:cover;width:100%;height:100%;">
+              <source src="{{ theme:asset src='assets/faros-intro.webm' }}" type="video/webm">
+              <source src="{{ theme:asset src='assets/faros-intro.ogv' }}" type="video/ogg">
+              <source src="{{ theme:asset src='assets/faros-intro.mp4' }}" type="video/mp4">
+              <!-- <track src="subtitles-en.vtt" kind="subtitles" srclang="en" 
+                     label="English" default> -->
+             </video>
+          </div>
+          <!-- <div class="swiper-slide">
+            {{ theme:img src="00home/home-slider-1.jpg" tag="true" }}
+            <div class="home-intro__text safari_only">
+              <h1 class="home-intro__title">
+                <a href="about">Compassion. Encouragement.<br>Respect. Friendship. Integrity.</a>
+              </h1>
+              <span class="home-intro__subtitle">Our core values unite us and shape our approach to helping refugee children</span>
+            </div>
+          </div> -->
+          <div class="swiper-slide">
+            {{ theme:img src="00home/home-slider-2.jpg" tag="true" }}
+            <div class="home-intro__text">
+              <h1 class="home-intro__title">
+                  <a href="/about">Transforming Lives</a>
+              </h1>
+              <span class="home-intro__subtitle">We combine protection services with informal education and mentoring that enable unaccompanied children to cultivate their talents.</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            {{ theme:img src="00home/home-slider-3.jpg" tag="true" }}
+            <div class="home-intro__text">
+              <h1 class="home-intro__title">
+                  <a href="/services">Our Services for<br>Unaccompanied Children.</a>
+              </h1>
+              <span class="home-intro__subtitle">We protect every child’s fundamental right to a childhood and equip them with the skills to face the future</span>
+            </div>
+          </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+  
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"><</div>
+      <div class="swiper-button-next">></div>
+  </div>
+</figure>

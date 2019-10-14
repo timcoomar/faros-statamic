@@ -1,0 +1,154 @@
+/** INNER PAGE **/
+
+[class*="about-section"] {
+  position:   relative;
+}
+
+.about-section--intro { // this is the whole of the HEADER with the sticky menu on the page template
+  z-index: 2;
+}
+
+.about-section--main { // this is the rest of the page which contains the various sections
+  z-index: 1;
+}
+
+// PAGE HEADER
+
+.page-header--nomenu + * {
+  padding-top: 1rem;
+}
+
+// BLOCKQUOTES
+
+.page-quote {
+  padding:    0;
+  margin:     3rem 0 2rem;
+  position:   relative;
+}
+
+  .page-quote__text {
+    display:          flex;
+    justify-content:  center;
+    align-items:      center;
+    flex-direction:   column;
+    padding:          6rem 2rem;
+    color:            white;
+    text-align:       center;
+  }
+
+    .page-quote__text p {
+      font-weight:    500;
+      font-size:      2.8rem;
+      margin-bottom:  3.5rem;
+      margin-top:     0;
+    }
+
+  .page-quote__image {
+    position:   absolute;
+    z-index:    -1;
+    top:        0;
+    left:       0;
+    margin:     0;
+    width:      100%;
+    height:     100%;
+    background: black;
+  }
+
+    .page-quote > figure > img {
+      width:      100%;
+      height:     100%;
+      object-fit: cover;
+      opacity:    .65;
+    }
+
+
+// HOME - WHO WE ARE
+
+.section-who .section-morelink {
+  margin-left: auto;
+}
+
+@media (max-width: 650px) {
+  .section-who .section-morelink {
+    margin-top: 1.5rem;
+  }
+}
+
+// ABOUT
+
+.page-about [class^="section-"] [class*="__text"] {
+  columns: 1;
+}
+
+.page-about .page-menu {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.logos-partners {
+  width:          50%;
+  padding-top:    5rem;
+  display:        grid;
+  grid-template-rows:  repeat(4, 6rem);
+  grid-template-columns: 12vw 12vw;
+  grid-gap:       1rem;
+  align-items:    center;
+  justify-content: center;
+}
+
+  .logos-partners > img {
+    width: auto;
+    max-height: 6rem;
+    margin: 0 auto 1rem;
+  }
+
+  @media (max-width: 650px) {
+    .logos-partners {
+      padding: 5rem 2rem 2rem;
+      grid-gap: 2rem;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .logos-partners {
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .logos-partners > img {
+      //max-height: 9rem;
+      border-bottom: 2rem solid white;
+    }
+  }
+
+.page-about .section-b--l .section-b__header::after {
+  width: 100%;
+}
+
+.page-about .page-menu {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+// SERVICES
+
+// Temporarily hide Innovation menu item
+
+// .page-services .page-menu > li:nth-of-type(3) {
+//   display: none;
+// }
+
+// .page-services .page-menu {
+//   grid-template-columns: repeat(3, 1fr);
+// }
+
+// APPROACH
+
+.page-approach .section-a__text {
+  columns: 1;
+}
+
+// VACANCIES
+
+.list-vacancies {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 2rem;
+}

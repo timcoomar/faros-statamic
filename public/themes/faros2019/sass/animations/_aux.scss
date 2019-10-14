@@ -1,0 +1,14 @@
+/** FADE IN EFFECT **/
+
+.fadeIn.hide {
+  opacity:    0;
+  -webkit-transform:  translate(0, 50px);
+  transform:  translate(0, 50px);
+  transition: all 1s;
+}
+
+.fadeIn.visible {
+  opacity:    1;
+  -webkit-transform:  translate(0, 0);
+  transform:  translate(0, 0);
+}

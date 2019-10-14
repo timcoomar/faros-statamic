@@ -1,0 +1,183 @@
+.page-intro__text {
+  position:   absolute;
+  left:       18vw;
+  bottom:     9vh;
+}
+
+@media (max-width: 650px) {
+  .page-intro__text {
+    bottom: 7vh;
+  }
+}
+
+  @media (max-width: 800px) {
+    .page-intro__text {
+      left: 3vw;
+    }
+    .page-menu {
+      //justify-content: space-between !important;
+    }
+  }
+
+  .page-intro__title {
+    color:          white;
+    font-weight:      bold;
+    font-size:        6rem;
+    margin:           0;
+    line-height:      .65;
+    text-transform:   lowercase;
+  }
+
+.page-intro__image {
+  width:        100%;
+  height:       91vh;
+  overflow:     hidden;
+}
+  @media (max-width: 650px) {
+    .page-intro__image {
+      height: 93vh
+    }
+  }
+
+  .page-intro__image img {
+    width:      100%;
+    height:     100%;
+    object-fit: cover;
+  }
+
+.page-menu {
+  position:           relative;
+  position:           sticky;
+  z-index:            99999999;
+  width:              100%;
+  top:                0;
+  display:            flex;
+  justify-content:    center;
+  list-style:         none;
+  margin:             0;
+  text-transform:     lowercase;
+  background:         rgba(255,255,255,0.9);
+  padding-left:       0;
+  transition:         width .2s;
+}
+
+  .page-menu.full-width {
+    width:              100vw !important;
+    border-bottom:      1px solid lightgray;
+  }
+
+.page-menu > * {
+  margin:             1vh 0;
+  height:             7vh;
+  border-right:       1px solid var(--faros-brown);
+  position:           relative;
+}
+
+.page-menu > .site-logo {
+  border: none;
+}
+
+.page-menu > li:last-child {
+  border:             none;
+}
+
+  .page-menu > li a:not(.site-logo--sticky) {
+    display:          block;
+    padding:          0 1.5rem;
+    margin:           0 1vh;
+    height:           100%;
+    line-height:      7vh;
+    font-weight:      bold;
+    color:            var(--faros-darkblue);
+    font-size:        2.3rem;
+  }
+
+  @media (max-width: 870px) {
+    .page-menu > li a:not(.site-logo--sticky) {
+      font-size:     2rem;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .page-menu > li a:not(.site-logo--sticky) {
+      font-size:     1.5rem;
+    }
+  }
+
+  @media (max-width: 650px) { /* Split menu into two columns on small screens */
+    .page-menu {
+      display:        grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align:     center;
+      transition:     padding .3s;
+    }
+    .page-menu.full-width {
+      padding-right:  4.6rem;
+    }
+    .page-menu > li {
+      height:       5vh;
+      display:      flex;
+      align-items:  center;
+      justify-content: center;
+      margin:       .8rem 0;
+    }
+    .page-menu > li a {
+      font-size:        1.2rem;
+      width:            100%;
+      line-height:      1 !important;
+      margin:           0;
+      padding:          0 !important;
+      display:          flex !important;
+      justify-content:  center;
+      align-items:      center
+    }
+    .page-menu > .site-logo--sticky {
+      position: absolute;
+      transform: translateX(-200vw);
+    }
+
+  }
+
+  @media (max-width: 650px) {
+    .page-menu > li {
+      height: 4.5vh;
+    }
+  }
+
+  .page-menu > li a:hover {
+    background:       var(--faros-darkblue);
+    color:            white;
+  }
+
+.page-menu > .site-logo--sticky {
+  overflow:         hidden;
+  min-width:        initial;
+  display:          flex;
+  justify-content:  center;
+  align-items:      center;
+  display:          none;
+  transition:       filter .3s;
+  border:           none;
+  position:         fixed;
+  left:             2rem;
+  top:              .1rem;
+  z-index:          9999;
+}
+
+  .page-menu > .site-logo--sticky:hover {
+    background: none;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
+  }
+
+  @media (max-width: 1040px) { /* hide motif when doesn't fit anymore */
+    .page-menu > .site-logo--sticky {
+      opacity: 0;
+    }
+  }
+
+
+  .page-menu > .site-logo--sticky img {
+    height:         auto;
+    max-height:     100%;
+    max-width:      100%;
+  }

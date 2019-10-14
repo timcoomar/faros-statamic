@@ -1,0 +1,77 @@
+{{ partial:menu_main }}
+
+<div class="grid-page" id="top"> 
+
+  <nav class="nav-main home-section--nav home-grid--nav">
+    {{ partial:svg_journey }}
+  </nav>
+
+  <header class="page-header--generic page-header--nomenu" id="page-header--nomenu">
+    <a href="/" class="site-logo">
+      {{ theme:img src="faros-logo-white-horizontal.png" tag="true" }}
+    </a>
+    <div class="page-intro__image">
+        {{ assets:headerimage }}
+        <img src="{{ permalink }}">
+      {{ /assets:headerimage }}
+    </div>
+    <div class="page-intro__text">
+      <h1 class="page-intro__title">{{ title }}</h1>
+    </div>
+  </header>
+
+  <main class="about-section about-grid--main">
+
+      <header class="summary-header">
+          <h1 class="summary-header__title">{{ title1 }}</h1>
+          <div class="summary-header__content">
+              {{ content1 | markdown }}
+              {{ if htmlcontent }} {{ htmlcontent }} {{ /if }}
+          </div>
+        </header>
+
+        {{ form:set is="contact" }}
+            {{ if {form:success} }}
+
+                {{ form:submission }}
+                    <div class="form-contact">Thanks for your message, {{ name }}.</div>
+                {{ /form:submission }}
+
+            {{ else }}
+
+              {{ form:create attr="class:form-contact" }}
+
+              <div class="contact-name">
+                <input type="text" name="name" value="{{ old:name }}" placeholder="Write your name or organisation here">
+                <label for="name">Name</label>
+              </div>
+
+              <div class="contact-email">
+                <input type="email" name="email" value="{{ old:email }}" placeholder="We need this to write you back">
+                <label for="email">Email</label>
+              </div>
+    
+              <div class="contact-message">
+                <textarea name="message" placeholder="What would you like to say...?">{{ old:message }}</textarea>
+                <label for="message">Your Message</label>
+              </div>
+
+              <div class="contact-button">
+                  <button type="submit">Send your message</button>
+                </div>
+    
+            {{ /form:create }} 
+
+            {{ /if }}
+        {{ /form:set }}
+        
+          
+
+    </main>
+
+    {{ partial:footer_nomap }}
+    
+</div> <!-- end grid-page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ theme:js src='site-min.js' }}"></script>

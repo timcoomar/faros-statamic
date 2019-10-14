@@ -1,0 +1,71 @@
+{{ partial:menu_main }}
+
+<div class="grid-page" id="top"> 
+
+  <nav class="nav-main home-section--nav home-grid--nav">
+    {{ partial:svg_journey }}
+  </nav>
+
+  {{ partial:page_sticky_header }}
+
+  <main class="about-section about-grid--main">
+
+    <article class="section-a parallax" id="section1">
+      <header class="section-a__header"><span>01. About</span></header>
+      <h2 class="section-a__title">{{ title1 }}</h2>
+      <div class="section-a__text">
+        {{ content1 | markdown }}
+      </div>
+    </article>
+
+    {{ partial:quote }}
+
+    <article class="section-b section-b--l section-innovation parallax" id="section2">
+      <div class="section-b__content">
+        <header class="section-b__header"><span>01. About</span></header>
+        <h2 class="section-b__title">{{ title2 }}</h2>
+        <div class="section-b__text">
+          {{ content2 | markdown }}
+        </div>
+      </div>
+      <figure class="logos-partners section-b__image">
+        <img style="grid-column: span 2" src="{{ theme:img src='logos-partners/logo-velux.png' }}">
+        <img src="{{ theme:img src='logos-partners/logo-eccex.jpg' }}">
+        <img src="{{ theme:img src='logos-partners/logo-epim.jpg' }}">
+        <img src="{{ theme:img src='logos-partners/logo-ias.png' }}">
+        <img src="{{ theme:img src='logos-partners/logo-irc.png' }}">
+        <img src="{{ theme:img src='logos-partners/logo-latsis.jpg' }}">
+        <img src="{{ theme:img src='logos-partners/logo-snf.jpg' }}">
+        <img src="{{ theme:img src='logos-partners/logo-unhcr.png' }}">
+        <img src="{{ theme:img src='logos-partners/logo-unicef.png' }}">
+      </figure>        
+    </article>
+
+    <article class="section-b section-b--r section-dropin" id="section3">
+      <div class="section-b__content">
+        <header class="section-b__header">01. About</header>
+        <h2 class="section-b__title">{{ title3 }}</h2>
+        <div class="section-b__text">
+          {{ content3 | markdown }}
+          <ul class="list-reports">
+            {{ farosreports }}
+              <li><a href="{{ assets:reportfile }} {{ url }} {{ /assets:reportfile }}">{{ reporttitle }}</a></li>
+            {{ /farosreports }}
+          </ul>
+        </div>
+      </div>
+      <figure class="section-b__image">
+        <img src="{{ theme:img src='03services/services-dropin.jpg' }}">
+      </figure>
+    </article>
+
+  </main>
+
+  {{ partial:footer_nomap }}
+
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+<script src="{{ theme:js src='site-min.js' }}"></script>
+{{ partial:sticky-js }}

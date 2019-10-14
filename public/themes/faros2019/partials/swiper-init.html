@@ -1,0 +1,59 @@
+<script>
+  $(document).ready(function(){
+
+    // Initialize and apply settings to swiper (as on hompage header)
+
+    var swiper = new Swiper('.swiper-container.vertical', {
+      direction: 'vertical',
+      speed: 1200,
+      loop: false,
+      allowTouchMove: false,
+      spaceBetween: 0,
+      //autoplay: {
+      //  delay: 5000,
+      //  reverseDirection: true,
+      //},
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    var swiper = new Swiper('.swiper-container.horizontal', {
+      speed: 1200,
+      loop: false,
+      allowTouchMove: true,
+      spaceBetween: 0,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
+    });
+
+    var ppbutton = document.getElementById("playpause");
+      ppbutton.addEventListener("click", playPause);
+      myVideo = document.getElementById("introvid");
+      function playPause() { 
+          if (myVideo.paused) {
+              myVideo.play();
+              ppbutton.classList.add("playing");
+              }
+          else  {
+              myVideo.pause();
+              ppbutton.classList.remove("playing");
+              }
+      }
+      myVideo.addEventListener('ended', function() {
+        myVideo.load();     
+      }); // to delete
+
+  });
+</script>

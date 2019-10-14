@@ -1,0 +1,40 @@
+.site-logo {
+  display:    block;
+  width:      12vw;
+  min-width:  14rem;
+  height:     auto;
+  position:   absolute;
+  top:        2.5vw;
+  left:       3.5vw;
+  z-index:    5;
+}
+
+/*** MAIN GRID ***/
+
+/* @todo - maybe use @supports here */
+
+.grid-home,
+.grid-page {
+  display:               grid;
+  grid-template-columns: 1fr 6rem;
+  grid-template-rows:    100vh auto auto;
+  grid-template-areas:   "intro  nav"
+                         "main   nav"
+                         "footer nav"
+}
+
+[class*="grid--intro"] {
+  grid-area:  intro;
+}
+
+[class*="grid--nav"] {
+  grid-area:  nav;
+}
+
+[class*="grid--main"] {
+  grid-area:  main;
+}
+
+[class*="grid--footer"] {
+  grid-area:  footer;
+}

@@ -1,0 +1,17 @@
+<script>
+  $(document).ready(function(){
+  
+    $(".page-menu").sticky({topSpacing:0});
+    $(".page-menu").on('sticky-start', function() {
+      $(this).toggleClass('full-width');
+      $('.site-logo--sticky').fadeIn();
+      $('.hamburger').addClass('darken');
+    });
+    $(".page-menu").on('sticky-end', function() {
+      $(this).toggleClass('full-width');
+      $('.site-logo--sticky').fadeOut();
+      $('.hamburger').removeClass('darken');
+    });
+  
+  });
+  </script>

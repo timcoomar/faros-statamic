@@ -1,0 +1,99 @@
+.swiper-container.vertical {
+  height: 100vh;
+  width: calc(100vw - 6rem);
+}
+
+  .swiper-container.vertical .swiper-slide img {
+    width:      100%;
+    height:     100%;
+    object-fit: cover;
+  }
+
+  .swiper-container.vertical .swiper-button-next, 
+  .swiper-container.vertical .swiper-button-prev {
+    color: white;
+    width: auto;
+    height: auto;
+    margin-top: 0;
+    background-size: initial;
+    background-image: none !important;
+    font-size: 5.7rem;
+    opacity: .4;
+    transition: .3s;
+    font-weight: 500;
+  }
+
+  .swiper-container.vertical .swiper-button-next {
+    top: auto;
+    bottom: 4rem;
+    right: 1rem;
+    transform: rotate(90deg);
+  }
+
+  .swiper-container.vertical .swiper-button-prev {
+    top: auto;
+    bottom: 6.5rem;
+    right: 1rem;
+    left: auto;
+    transform: rotate(90deg);
+  }
+
+  .swiper-container-vertical > .swiper-pagination-bullets {
+    right: 2.2rem;
+    top: auto;
+    bottom: 10px !important;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  .swiper-container .swiper-pagination-bullet {
+      background: rgba(255,255,255,0.4);
+      opacity: 1;
+      width: .7rem;
+      height: .7rem;
+  }
+  .swiper-container .swiper-pagination-bullet:hover {
+    background: rgba(255,255,255,1);
+  }
+
+  .swiper-container.vertical .swiper-pagination-bullet-active {
+      background: rgba(255,255,255,1);
+      opacity: 1;
+  }
+
+  .swiper-container.vertical .swiper-button-prev:hover,
+  .swiper-container.vertical .swiper-button-next:hover {
+    opacity: 1;
+  }
+
+// HORIZONTAL SLIDER
+
+.home-services__slider {
+  z-index: 10 !important;
+}
+
+.swiper-container.horizontal > .swiper-pagination-bullets {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+
+#playpause {
+  position: absolute;
+  width:    100%;
+  height:   100%;
+  bottom:   0;
+  left:     0;
+  display:  flex;
+  justify-content: center;
+  align-items:     center;
+  opacity:  .5;
+}
+
+#playpause.playing > svg {
+  display:    none;
+}
+
+#playpause:hover {
+  opacity:  1;
+}

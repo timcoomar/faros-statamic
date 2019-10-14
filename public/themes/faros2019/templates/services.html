@@ -1,0 +1,86 @@
+{{ partial:menu_main }}
+
+<div class="grid-page" id="top"> 
+
+  <nav class="nav-main home-section--nav home-grid--nav">
+    {{ partial:svg_journey }}
+  </nav>
+
+  {{ partial:page_sticky_header }}
+
+  <main class="about-section about-grid--main">
+
+    <header class="summary-header">
+      <h1 class="summary-header__title">What we do for unaccompanied children</h1>
+      <div class="summary-header__content">
+        <p>Child protection is at the core of Faros’ vision. Our staff is combing the streets of Athens seeking, supporting, and bringing unaccompanied refugee children to safety. Our drop-in centre is in the heart of the city and easily accessible. We provide a safe environment, hot meals, and psychosocial support to 100 boys and teenagers every week. Our shelter has also become home to 22 unaccompanied children. Children have access to legal services, education, and vocational training. But our vision goes even further. We strive to protect every child’s fundamental right to a childhood and equip them with the skills to face the future.</p>
+      </div>
+    </header> 
+
+    {{ partial:quote }}
+
+    <article class="section-a parallax" id="section1">
+      <header class="section-a__header"><span>03. Services</span></header>
+      <h2 class="section-a__title">{{ title1 }}</h2>
+      <div class="section-a__text">
+        {{ content1 | markdown }}
+      </div>
+    </article>
+
+    <article class="section-b section-b--l section-innovation parallax" id="section2">
+      <div class="section-b__content">
+        <header class="section-b__header"><span>03. Services</span></header>
+        <h2 class="section-b__title">{{ title2 }}</h2>
+        <div class="section-b__text">
+          {{ content2 | markdown }}
+        </div>
+      </div> 
+      <figure class="section-b__image">
+        {{ assets:image2 }}
+          <img src="{{ permalink }}">
+        {{ /assets:image2 }}
+      </figure>       
+    </article>
+
+    <article class="section-b section-b--r section-dropin" id="section3">
+      <div class="section-b__content">
+        <header class="section-b__header">03. Services</header>
+        <h2 class="section-b__title">{{ title3 }}</h2>
+        <div class="section-b__text">
+          {{ content3 | markdown }}
+        </div>
+      </div>
+      <figure class="section-b__image">
+        {{ assets:image3 }}
+          <img src="{{ permalink }}">
+        {{ /assets:image3 }}
+      </figure>
+    </article>
+
+    {{ partial:quote2 }}
+
+    <article class="section-b section-b--l section-family parallax fadeIn" id="section4">
+        <div class="section-b__content">
+          <header class="section-b__header"><span>03. Services</span></header>
+          <h2 class="section-b__title">{{ title4 }}</h2>
+          <div class="section-b__text">
+              {{ content4 | markdown }}
+          </div>
+        </div>
+        <figure class="section-b__image">
+          {{ assets:image4 }}
+            <img src="{{ permalink }}">
+          {{ /assets:image4 }}
+        </figure>
+    </article>
+
+  </main>
+
+  {{ partial:footer_nomap }}
+
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+<script src="{{ theme:js src='site-min.js' }}"></script>
+{{ partial:sticky-js }}

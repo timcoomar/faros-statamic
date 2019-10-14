@@ -1,0 +1,91 @@
+title: About Page
+fields:
+
+  headerimage:
+    display:    Header Image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
+
+  _section1:
+    display:    Section 1
+    type:       section
+
+  title1:            
+    display:    Section 1 Title        
+    type:       text            
+  content1:
+    display:    Section 1 Content
+    type:       markdown
+
+  _section2:
+    display:    Section 2
+    type:       section
+
+  title2:
+    display:    Section 2 Title
+    type:       text
+  content2:
+    display:    Section 2 Content
+    type:       markdown
+  image2:
+    display:    Section 2 Image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
+
+  _section3:
+    display:    Section 3
+    type:       section
+
+  title3:
+    display:    Section 3 Title
+    type:       text
+  content3:
+    display:    Section 3 Content
+    type:       markdown
+  image3:
+    display:    Section 3 Image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
+
+  _section4:
+    display:    Section 4
+    type:       section
+
+  title4:
+    display:    Section 4 Title
+    type:       text
+  content4:
+    display:    Section 4 Content
+    type:       markdown
+  image4:
+    display:    Section 4 Image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
+
+  quoteauthor:
+    display:    Quote author
+    type:       text
+  quotetext:
+    display:    Quote text
+    type:       markdown
+  quotebackground:
+    display:    Quote image
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
+
+  quoteauthor2:
+    display:    Quote author 2
+    type:       text
+  quotetext2:
+    display:    Quote text 2
+    type:       markdown
+  quotebackground2:
+    display:    Quote image 2
+    type:       assets
+    container:  main
+    validate:   "ext:jpg,jpeg,png"
