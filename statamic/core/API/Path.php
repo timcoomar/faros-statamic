@@ -134,7 +134,8 @@ class Path
             return null;
         }
 
-        return self::tidy(join($args, '/'));
+        //return self::tidy(join($args, '/'));
+        return self::tidy(join('/',$args));
     }
 
     /**

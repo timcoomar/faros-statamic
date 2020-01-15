@@ -1808,6 +1808,7 @@ button.swiper-pagination-bullet {
   justify-content: center;
   align-items: center;
   opacity: .5;
+  z-index: 9999;
 }
 
 #playpause.playing > svg {
