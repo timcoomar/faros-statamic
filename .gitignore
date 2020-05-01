@@ -7,3 +7,6 @@ local/storage/*
 local/temp/*
 installer.php
 .vscode
+public/themes/faros2019/assets/faros-intro.mp4
+public/themes/faros2019/assets/faros-intro.ogg
+public/themes/faros2019/assets/faros-intro.webm
