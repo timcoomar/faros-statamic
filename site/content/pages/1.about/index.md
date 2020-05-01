@@ -9,9 +9,27 @@ content1: |
   Faros’ name translates to ‘lighthouse’ in Greek: a sign that one is nearing a safe haven. “The dream was to start a place where refugee children could find a caring environment and professional help, discover their worth, and find hope for the future”, Patricia says.
   
   Our vision is to protect refugee children and youth, help them realize their full potential, and guide them in the direction of a better future. Compassion, respect, encouragement, friendship, and integrity are core values that unite us and shape our approach to helping refugee children.
-title2: 'Partners & Projects'
-content2: 'We are dependent on partners, who stand with us in our work. They are visible community leaders, foundations and advocates for Faros’ mission, co-convene events with us, and jointly develop programs and projects.'
+title2: Approach
+content2: 'We help unaccompanied children and refugee youth find safety, discover their worth, and build a future perspective. We work holistically and take responsibility for each refugee child and youth and provide individual tailored care. Through this we wish to see every unaccompanied child and refugee youth live with dignity and hope and to be equipped to make a positive change in society.'
 title3: Reports
+content3: 'fjeaofji jfaweijf joiaf;a j j;i oj;oij ;j.   j;io j;j ; jlj oij;j jiojfaw j;i jio; ajmza;xviwefp klva;j i a;ij falksm ;j iao;jf lk kja;iwe vlma; oi jam lkam i;j;  l;kjmkl;j lk;mjlkam ai jlk; malkf ma;ijm al malk ja;l kja;o ifmalkm;valkvcmva;ioj a k;.'
+annualreports:
+  -
+    reportfile:
+      - /public/themes/faros2019/assets/pdfs/uasc_absconding_report_gr.pdf
+    reporttitle: 'Annual Report 2019'
+financialreports:
+  -
+    reportfile:
+      - /public/themes/faros2019/assets/pdfs/uasc_absconding_report_gr.pdf
+    reporttitle: 'Financial Report 2019'
+statements:
+  -
+    reportfile:
+      - /public/themes/faros2019/assets/pdfs/uasc_absconding_report_eng.pdf
+    reporttitle: 'Statement 2019'
+title4: Media
+content4: 'fdafea fwaefwa'
 farosreports:
   -
     reporttitle: '"Children on the run: experiences of unaccompanied minors leaving shelters in Greece" report (English version - posted 23rd April 2018)'

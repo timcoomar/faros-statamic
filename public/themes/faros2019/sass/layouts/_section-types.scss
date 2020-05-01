@@ -54,7 +54,8 @@
 .section-a { // type a has the title on the left and the text content in two columns to the right of it
   display:            flex;
   flex-wrap:          wrap;  
-  padding:            6.5vw 2rem 4rem;                 
+  //padding:            6.5vw 2rem 4rem; 
+  padding:            4.5rem 2rem 4rem;
 }
 
   .section-a__header {
@@ -99,6 +100,7 @@
     }
 
   .section-a__text {
+    --content-text-size: 1.3rem;
     width:          65%;
     color:          var(--faros-warmgray);
     padding:        1rem;
@@ -295,3 +297,13 @@
       left: 2rem;
     }
   }
+
+// SMALL HEADER - IE. NEWS PAGE
+
+.page-header--small {
+  height:   var(--small-header);
+  position: relative;
+}
+.page-header--small > .page-intro__text {
+  bottom: 0;
+}

@@ -1,0 +1,52 @@
+@media (min-width: 1000px) {
+  .grid-content {
+    display:                grid;
+    grid-template-columns:  13em 1fr;
+  }
+}
+
+.main-about {
+  padding:    1.5em 2em 1em;
+}
+
+.area-content {
+  line-height:   1.7;
+  font-size:     1.5rem;
+
+  p {
+    margin-bottom:  1em;
+  }
+}
+
+// Reports
+
+@media (min-width: 1000px) {
+  .grid-reports {
+    display:                grid;
+    grid-template-columns:  repeat(3, 1fr);
+
+    ul:nth-child(2) {
+      border-left:       1px solid var(--faros-gray);
+      border-right:       1px solid var(--faros-gray);
+    }
+  }
+}
+
+.grid-reports {
+  font-size:              1.5rem;
+  padding-top:            .7em;
+
+  h4 {
+    text-align:         center;
+    color:              var(--faros-darkblue);
+    font-size:          1.4em;
+    font-weight:        600;
+    margin-bottom:      .5em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-summary {
+    padding-left: 0;
+  }
+}

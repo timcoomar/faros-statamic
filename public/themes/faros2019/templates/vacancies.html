@@ -29,13 +29,13 @@
           <p>Current job opportunities:</p>
           <ul class="list-vacancies">
             {{ vacancies }}
-              <li><a href="{{ assets:pdf }} {{ url }} {{ /assets:pdf }}">{{ job }}</a></li>
+              <li><a data-lightbox-type="iframe" class="lightbox" aria-haspopup="dialog" href="{{ assets:pdf }} {{ url }} {{ /assets:pdf }}">{{ job }}</a></li>
             {{ /vacancies }}
           </ul>
           <p>Contracts for tender:</p>
           <ul class="list-tenders">
               {{ tenders }}
-                <li><a href="{{ assets:contract }} {{ url }} {{ /assets:contract }}">{{ tender }}</a></li>
+                <li><a data-lightbox-type="iframe" class="lightbox" aria-haspopup="dialog" href="{{ assets:contract }} {{ url }} {{ /assets:contract }}">{{ tender }}</a></li>
               {{ /tenders }}
             </ul>
       </div>
@@ -48,4 +48,10 @@
 </div> <!-- end grid-page -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="{{ theme:js src='site-min.js' }}"></script>
+<script src="{{ theme:js src='site.js' }}"></script>
+<script src="{{ theme:js src='topbox.js' }}"></script>
+<script>
+	$(document).ready(function() {
+		$('.lightbox').topbox();
+	});
+</script>

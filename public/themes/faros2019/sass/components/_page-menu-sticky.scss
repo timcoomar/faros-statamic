@@ -45,6 +45,10 @@
     object-fit: cover;
   }
 
+.page-intro__image--small {
+  height: var(--small-header);
+}
+
 .page-menu {
   position:           relative;
   position:           sticky;

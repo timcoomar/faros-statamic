@@ -1,14 +1,11 @@
 title1: 'who we are'
-content1: 'Faros is a Christian non-profit organization that provides care and humanitarian support to unaccompanied refugee children and youth, as well as refugee families with children in Athens, Greece. In our work, we are committed to professionalism, accountability, and transparency. Faros is supported by individuals, institutional donors, foundations, as well as local and international church communities.'
+content1: 'Faros is a Christian non-profit organization that provides humanitarian care and individual support to unaccompanied children and refugee youth. Our vision is to see every unaccompanied child and refugee youth live with dignity and hope and be equipped to make a positive change in society. We want to take responsibility of the individual unaccompanied children and refugee youth, and help them find safety, discover their worth, and build a future perspective.'
 title2: 'Embracing people'
-content2: |
-  At Faros, we combine protection services with a holistic approach that enables unaccompanied children and youth to find and cultivate their skills and talents.
-  
-  In addition, we care for refugee mothers and families with children. At our family center in central Athens, we provide access to psychosocial support, information, and workshops that will enable them to integrate better into society. We aim to contribute to a more efficient child protection system in Athens, by conducting independent research, bringing best practices, and partnering with experts around the world.
+content2: 'We help unaccompanied children and refugee youth find safety, discover their worth, and build a future perspective. We work holistically and take responsibility for each refugee child and youth and provide individual tailored care. Through this we wish to see every unaccompanied child and refugee youth live with dignity and hope and to be equipped to make a positive change in society. We aim to contribute to a more efficient child protection system by conducting independent research, bringing best practices, and partnering with experts around the world.'
 image2:
-  - /public/themes/faros2019/assets/day-one-7.jpg
-title3: shelter
-content3: 'Faros’ shelter can host 22 unaccompanied refugee boys from the ages of 10 to 16. It is designed to be able to provide protection and immediately take in children from off the street. The shelter provides a temporary home to unaccompanied children, where the focus is to provide the best possible individual care to every child. Our approach is emphasized in our relationship with the children; we try to restore normality, guide them in critical life decisions, and enhance their curiosity and creativity through various activities.'
+  - /public/themes/faros2019/assets/home-slider-3.jpg
+title3: 'our services'
+content3: 'Our staff is combing the streets of Athens seeking, supporting, and bringing unaccompanied refugee children to safety. Our drop-in centre is in the heart of the city and easily accessible. We provide a safe environment, hot meals, and psychosocial support to 100 boys and teenagers every week. Our shelter has also become home to 22 unaccompanied children. Children have access to legal services, education, and vocational training. But our vision goes even further. We strive to protect every child’s fundamental right to a childhood and equip them with the skills to face the future.'
 services_slider:
   - /public/themes/faros2019/assets/services-slider-1.jpg
   - /public/themes/faros2019/assets/services-slider-2.jpg

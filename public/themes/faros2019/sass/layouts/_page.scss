@@ -18,6 +18,29 @@
   padding-top: 1rem;
 }
 
+// AREA HEADINGS
+
+.area-heading {
+  display:            block;
+  padding-left:       2rem;
+  width:              18rem;
+  padding-bottom:     .3rem;
+  border-bottom:      1px solid var(--faros-gray);
+  font-weight:        normal;
+  text-transform:     uppercase;
+  font-size:          1.3rem;
+  margin-bottom:      .6rem;
+}
+
+.main-title {
+  color:          var(--faros-darkblue);
+  font-size:      4rem;
+  font-weight:    bold;
+  line-height:    1.3;
+  margin-bottom:  .6rem;
+  text-transform: lowercase;
+}
+
 // BLOCKQUOTES
 
 .page-quote {
@@ -151,4 +174,9 @@
 .list-vacancies {
   border-bottom: 1px solid rgba(0,0,0,0.2);
   padding-bottom: 2rem;
+}
+
+.section-summary {
+  padding-left:   3em;
+  font-size:      1.5rem;
 }

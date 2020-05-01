@@ -6,8 +6,11 @@
     --burger-height:    .17em;
     --burger-gap:       .3em;
     --burger-color:     rgba(96,113,141,1);
+    --faros-gray:       rgba(207, 204, 202, 1);
+    --small-header:     30vw;
   }
   
+  @import 'base/reset';
   @import 'base/base';
 
   @import 'elements/forms';
@@ -19,11 +22,15 @@
   @import 'components/nav';
   @import 'components/page-menu-sticky';
   @import 'components/footer';
+  @import 'components/lightbox';
   
   @import 'layouts/layout';
   @import 'layouts/section-types';
   @import 'layouts/home';
   @import 'layouts/page';
+  @import 'layouts/about';
+  @import 'layouts/news';
+  @import 'layouts/projects';
 
   @import 'animations/aux';
     

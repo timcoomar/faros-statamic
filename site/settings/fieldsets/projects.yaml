@@ -1,0 +1,52 @@
+sections:
+  main:
+    display: Main
+    fields:
+      project_1_title:
+        type: text
+        display: 'Project Area 1 Title'
+      project_1_summary:
+        cheatsheet: false
+        restrict_assets: false
+        type: markdown
+        display: 'Project Area 1 Summary'
+      project_1_items:
+        mode: table
+        fields:
+          project_1_image:
+            container: main
+            folder: /
+            restrict: false
+            max_files: 1
+            type: assets
+            display: 'Project 1 Image'
+          project_1_url:
+            type: text
+            display: 'Project 1 Url'
+        type: grid
+        display: 'Project 1 Items'
+      project_2_title:
+        type: text
+        display: 'Project 2 Title'
+      project_2_summary:
+        cheatsheet: false
+        restrict_assets: false
+        type: markdown
+        display: 'Project 2 Summary'
+      project_2_items:
+        mode: table
+        fields:
+          project_2_image:
+            container: main
+            folder: /
+            restrict: false
+            max_files: 1
+            type: assets
+            display: 'Project 2 Image'
+          project_2_url:
+            type: text
+            display: 'Project 2 Url'
+        type: grid
+        display: 'Project 2 Items'
+taxonomies: false
+title: Projects

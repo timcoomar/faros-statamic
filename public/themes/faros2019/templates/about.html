@@ -8,55 +8,78 @@
 
   {{ partial:page_sticky_header }}
 
-  <main class="about-section about-grid--main">
+  <main class="main-about">
 
-    <article class="section-a parallax" id="section1">
-      <header class="section-a__header"><span>01. About</span></header>
-      <h2 class="section-a__title">{{ title1 }}</h2>
-      <div class="section-a__text">
-        {{ content1 | markdown }}
+    <article id="section1">
+      <p class="area-heading">01. About</p>
+      <div class="grid-content">
+        <h2 class="main-title">{{ title1 }}</h2>
+        <div class="area-content">
+          {{ content1 | markdown }}
+        </div>
       </div>
     </article>
 
-    {{ partial:quote }}
+    <div class="divider"></div>
 
-    <article class="section-b section-b--l section-innovation parallax" id="section2">
-      <div class="section-b__content">
-        <header class="section-b__header"><span>01. About</span></header>
-        <h2 class="section-b__title">{{ title2 }}</h2>
-        <div class="section-b__text">
+    <article id="section2">
+      <div class="grid-content">
+        <h2 class="main-title">{{ title2 }}</h2>
+        <div class="area-content">
           {{ content2 | markdown }}
         </div>
       </div>
-      <figure class="logos-partners section-b__image">
-        <img style="grid-column: span 2" src="{{ theme:img src='logos-partners/logo-velux.png' }}">
-        <img src="{{ theme:img src='logos-partners/logo-eccex.jpg' }}">
-        <img src="{{ theme:img src='logos-partners/logo-epim.jpg' }}">
-        <img src="{{ theme:img src='logos-partners/logo-ias.png' }}">
-        <img src="{{ theme:img src='logos-partners/logo-irc.png' }}">
-        <img src="{{ theme:img src='logos-partners/logo-latsis.jpg' }}">
-        <img src="{{ theme:img src='logos-partners/logo-snf.jpg' }}">
-        <img src="{{ theme:img src='logos-partners/logo-unhcr.png' }}">
-        <img src="{{ theme:img src='logos-partners/logo-unicef.png' }}">
-      </figure>        
     </article>
 
-    <article class="section-b section-b--r section-dropin" id="section3">
-      <div class="section-b__content">
-        <header class="section-b__header">01. About</header>
-        <h2 class="section-b__title">{{ title3 }}</h2>
-        <div class="section-b__text">
-          {{ content3 | markdown }}
-          <ul class="list-reports">
-            {{ farosreports }}
-              <li><a href="{{ assets:reportfile }} {{ url }} {{ /assets:reportfile }}">{{ reporttitle }}</a></li>
-            {{ /farosreports }}
-          </ul>
-        </div>
+    <div class="divider"></div>
+
+    <article id="section3">
+      <h2 class="main-title">{{ title3 }}</h2>
+      <div class="section-summary">
+        {{ content3 | markdown }}
       </div>
-      <figure class="section-b__image">
-        <img src="{{ theme:img src='03services/services-dropin.jpg' }}">
-      </figure>
+      <div class="grid-reports">
+        <ul>
+          <h4>Annual</h4>
+          {{ annualreports }}
+          <li>
+            <a href="{{ assets:reportfile }} {{ url }} {{ /assets:reportfile }}">
+              {{ reporttitle }}
+            </a>
+          </li>
+          {{ /annualreports }}
+        </ul>
+        <ul>
+          <h4>Financial</h4>
+          {{ financialreports }}
+          <li>
+            <a href="{{ assets:reportfile }} {{ url }} {{ /assets:reportfile }}">
+              {{ reporttitle }}
+            </a>
+          </li>
+          {{ /financialreports }}
+        </ul>
+        <ul>
+          <h4>Statements</h4>
+          {{ statements }}
+          <li>
+            <a href="{{ assets:reportfile }} {{ url }} {{ /assets:reportfile }}">
+              {{ reporttitle }}
+            </a>
+          </li>
+          {{ /statements }}
+        </ul>
+      </div>
+    </article>
+
+    <div class="divider"></div>
+
+    <article id="section4">
+      <h2 class="main-title">{{ title4 }}</h2>
+      <div class="section-summary">
+        {{ content4 | markdown }}
+      </div>
+      
     </article>
 
   </main>

@@ -35,6 +35,7 @@ html {
 
 body {
   font-size:    1.6rem;
+  font-size:    clamp(18px, 2vw, 35px);
   padding:      0;
   margin:       0;
   font-family:  "Roboto", Helvetica Neue, Arial, sans-serif;
@@ -46,6 +47,6 @@ body {
   font-weight:  700;
 }
 
-.dropshadow .site-logo img {
+.site-logo img {
   filter: drop-shadow(0 0 3px rgba(10,10,10,0.5));
 }

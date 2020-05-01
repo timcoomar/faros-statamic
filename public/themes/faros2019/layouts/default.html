@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content='{{ meta_description or "Faros NGO in Athens, Greece, serving unaccompanied refugee minors and youth" }}'>
+    <meta name="description"
+      content='{{ meta_description or "Faros NGO in Athens, Greece, serving unaccompanied refugee minors and youth" }}'>
     <title>{{ meta_title or title }} | Faros – Lighting their way</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,700,700i&amp;subset=greek" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.4.0/modern-normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,700,700i&amp;subset=greek" rel="stylesheet">
     <link rel="stylesheet" href="{{ theme:css }}">
   </head>
+
   <body class='page-{{ slug or "home" }} dropshadow'>
+    
     {{ template_content }}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+    <script>
+      jQuery(document).ready(function ($) {
+        var tlBurger = new TimelineLite({
+          paused: true,
+          reversed: true,
+        });
+        tlBurger.to("#burger__upper", 0.75, {
+          ease: Back.easeInOut.config(1.7),
+          rotation: -45,
+          y: "-33px",
+          transformOrigin: "center"
+        }, 0.25)
+          .to("#burger__middle", 1, {
+            ease: Power4.easeInOut,
+            opacity: 0,
+            x: "-100%",
+            transformOrigin: "center"
+          }, 0)
+          .to("#burger__lower", 0.75, {
+            ease: Back.easeInOut.config(1.7),
+            rotation: 45,
+            y: "33px",
+            transformOrigin: "center"
+          }, 0.25);
+        $('#burger').animation = tlBurger;
+        $('#burger-mobile').animation = tlBurger;
+        $("#burger").click(function () {
+          $(".site-menu--main").toggleClass("open");
+          $("svg rect").toggleClass("open");
+          tlBurger.reversed() ? tlBurger.play() : tlBurger.reverse();
+        });
+        $("#burger-mobile").click(function () {
+          $(".site-menu--mobile").toggleClass("open");
+          tlBurger.reversed() ? tlBurger.play() : tlBurger.reverse();
+        });
+      });
+      const targets = document.querySelectorAll('img');
+      const lazyLoad = target => {
+        const io = new IntersectionObserver((entries, observer) => {
+          //console.log(entries)
+          entries.forEach(entry => {
+            //console.log('😍');
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              const src = img.getAttribute('data-lazy');
+              if (src) {
+                img.setAttribute('src', src);
+                img.classList.add('fade');
+              }
+              observer.disconnect();
+            }
+          });
+        });
+        io.observe(target)
+      };
+      targets.forEach(lazyLoad);
+    </script>
   </body>
+
 </html>

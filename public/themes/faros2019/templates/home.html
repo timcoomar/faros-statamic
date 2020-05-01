@@ -1,14 +1,14 @@
 {{ partial:menu_main }}
 
-<div class="grid-home"> 
+<div class="grid-home">
 
   <nav class="nav-main home-section--nav home-grid--nav">
     {{ partial:svg_journey }}
-  </nav> 
+  </nav>
 
   <header class="home-section--intro home-grid--intro">
     <a href="/" class="site-logo">
-      {{ theme:img src="faros-logo-white-horizontal.png" tag="true" }}
+      <img src="{{ theme:img src='faros-logo-white-horizontal.png' }}">
     </a>
     {{ partial:home_header_slider }}
   </header>
@@ -30,7 +30,7 @@
       </header>
       <figure class="content__image">
         {{ assets:image2 }}
-          <img src="{{ permalink }}">
+        <img data-lazy="{{ permalink }}">
         {{ /assets:image2 }}
       </figure>
       <h2 class="content__title">{{ title2 }}</h2>
@@ -51,14 +51,14 @@
           {{ content3 | markdown }}
         </div>
         <figure class="content__image home-services__slider">
-          
+
           <div class="swiper-container horizontal">
             <div class="swiper-wrapper">
-                {{ assets:services_slider }}
-                  <div class="swiper-slide">
-                    <img src="{{ url }}">
-                  </div>
-                {{ /assets:services_slider }}
+              {{ assets:services_slider }}
+              <div class="swiper-slide">
+                <img data-lazy="{{ url }}">
+              </div>
+              {{ /assets:services_slider }}
             </div>
             <div class="swiper-pagination"></div>
             <!-- <div class="swiper-button-prev"></div>
@@ -66,7 +66,7 @@
           </div>
 
         </figure>
-      <a href="services" class="section-morelink">Read more</a>
+        <a href="services" class="section-morelink">Read more</a>
     </article>
     <article class="home-section--main__d full-width">
       <header class="content__header">
@@ -77,7 +77,8 @@
         <div class="content__text">
           <a href="mailto:volunteers@faros.org.gr" class="donation donation--time hovered">
             <h3 class="donation__title">time</h3>
-            <p>Donate your time. Become a volunteer. Contact us at volunteers@faros.org.gr to find opportunities to serve.</p>
+            <p>Donate your time. Become a volunteer. Contact us at volunteers@faros.org.gr to find opportunities to
+              serve.</p>
           </a>
           <a href="/give" class="donation donation--money">
             <h3 class="donation__title">money</h3>
@@ -100,7 +101,7 @@
       </a>
     </article>
   </main>
-  
+
   {{ partial:footer }}
 
 </div>

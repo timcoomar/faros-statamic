@@ -1,0 +1,78 @@
+{{ partial:menu_main }}
+
+<div class="grid-page" id="top"> 
+
+  <nav class="nav-main home-section--nav home-grid--nav">
+    {{ partial:svg_journey }}
+  </nav>
+
+  <header class="page-header--generic page-header--nomenu" id="page-header--nomenu">
+    <a href="/" class="site-logo">
+      {{ theme:img src="faros-logo-white-horizontal.png" tag="true" }}
+    </a>
+    <div class="page-intro__image">
+      {{ assets:headerimage }}
+        <img src="{{ permalink }}">
+      {{ /assets:headerimage }}
+    </div>
+    <div class="page-intro__text">
+      <h1 class="page-intro__title">{{ title }}</h1>
+    </div>
+  </header>
+
+  <main class="about-section about-grid--main main-projects">
+
+    <p class="area-heading">
+      Our Partners  
+    </p>
+
+    <h2 class="main-title">{{ project_1_title }}</h2>
+
+    <article class="section-summary">
+      {{ project_1_summary | markdownFilter }}
+    </article>
+
+    <section class="project-list">
+      {{ project_1_items }}
+        <div class="project-item">
+          {{ if project_1_url }}
+            <a href="{{ project_1_url }}">
+              {{ project_1_image | image }}
+            </a>
+          {{ else }}
+            {{ project_1_image | image }}
+          {{ /if }}
+        </div>
+      {{ /project_1_items }}
+    </section>
+
+    <div class="divider"></div>
+
+    <h2 class="main-title">{{ project_2_title }}</h2>
+
+    <article class="section-summary">
+      {{ project_2_summary | markdownFilter }}
+    </article>
+
+    <section class="project-list">
+      {{ project_2_items }}
+        <div class="project-item">
+          {{ if project_2_url }}
+            <a href="{{ project_2_url }}">
+              {{ project_2_image | image }}
+            </a>
+          {{ else }}
+            {{ project_2_image | image }}
+          {{ /if }}
+        </div>
+      {{ /project_2_items }}
+    </section>
+
+  </main>
+
+  {{ partial:footer }}
+
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ theme:js src='site-min.js' }}"></script>

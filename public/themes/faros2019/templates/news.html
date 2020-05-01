@@ -1,0 +1,78 @@
+<div class="full-width">
+
+  {{ partial:menu_main }}
+
+</div>
+
+<div class="grid-page--news" id="top">
+
+  <!-- <nav class="nav-main home-section--nav home-grid--nav">
+    {{ partial:svg_journey }}
+  </nav> -->
+
+  <header class="page-header--generic page-header--small">
+    <a href="/" class="site-logo">
+      {{ theme:img src="faros-logo-white-horizontal.png" tag="true" }}
+    </a>
+    <div class="page-intro__image page-intro__image--small">
+      {{ assets:headerimage }}
+      <img src="{{ permalink }}">
+      {{ /assets:headerimage }}
+    </div>
+    <div class="page-intro__text">
+      <h1 class="page-intro__title">{{ title }}</h1>
+    </div>
+  </header>
+
+  <main class="grid-news main-news">
+
+    {{ collection:news limit="6" paginate="true" as="posts" }}
+
+      {{ posts }}
+
+        <article class="newspost">
+
+          {{ if image }}
+            <figure class="newspost__image">
+              <a href="{{ permalink }}">
+                {{ image | image }}
+              </a>
+            </figure>
+          {{ /if }}
+          <date class="newspost__date">{{ newsdate format="j F 'y" }}</date>
+          <h3 class="newspost__title">
+            <a href="{{ permalink }}">{{ title | safe_truncate:15 }}</a>
+          </h3>
+          <div class="newspost__content">
+            {{ content | safe_truncate:250:... }}
+          </div>
+
+        </article>
+
+      {{ /posts }}
+
+      {{ paginate }}
+        <nav class="newspost__pagination">
+          {{ if prev_page }}
+            <a href="{{ prev_page }}">⬅ Previous</a>
+          {{ else }}
+            <a class="disabled" disabled>⬅ Previous</a>
+          {{ /if }}
+          <p class="newspost__pagination-count">{{ current_page }} of {{ total_pages }}</p>
+          {{ if next_page }}
+            <a href="{{ next_page }}">Next ➡</a>
+          {{ else }}
+            <a class="disabled" disabled>Next ➡</a>
+          {{ /if }}
+        </nav>
+      {{ /paginate }}
+
+    {{ /collection:news }}
+
+  </main>
+
+  {{ partial:footer_nomap }}
+
+</div> <!-- end grid-page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
